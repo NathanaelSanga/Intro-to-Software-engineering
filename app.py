@@ -8,6 +8,7 @@ from apps.products import products_bp
 from apps.cart import cart_bp
 from flask import Flask, render_template
 from flask_migrate import Migrate
+from model import db, Feedback
 
 app = Flask(__name__)
 
