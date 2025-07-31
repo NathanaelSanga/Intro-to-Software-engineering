@@ -35,7 +35,8 @@ def feedback():
             db.session.add(new_feedback)
             db.session.commit()
             flash('Thank you for your feedback!', 'success')
-        except:
+        except: Exception as e:
+            print(f"Error: {e}")
             flash('Error submitting feedback. Please try again.', 'danger')
         
     return rendet_template('feedback.html')
