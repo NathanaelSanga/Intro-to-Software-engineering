@@ -41,10 +41,10 @@ class User(UserMixin, db.Model):
 class Feedback(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), nullable=False)
-    email = db.Column(db.String(120), nullable=False)
+    email = db.Column(db.String(100), nullable=False)
     message = db.Column(db.Text, nullable=False)
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
-    user_id = db.Column(db.string(50))
+    user_type = db.Column(db.String(10))
 
 class Product(db.Model):
     __tablename__ = 'products'
